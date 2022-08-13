@@ -1,0 +1,8 @@
+
+fuente: libro ocp 11, pag 308.
+
+this.X -> para llamar al miembro de una clase.
+this() -> para llamar al constructor de la clase.
+
+super.X -> para llamar a un miembro de la clase madre.
+super() -> para llamar al un constructor de la clase madre.
