@@ -1,11 +1,14 @@
-package com.desabisc.examplea;
+package com.desabisc.create;
 
-public class MainExampplea {
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+public class Main {
     public static void main(String[] args) {
-        System.out.println("begin");
+        log.info("begin");
         (new ReadInventoryThread()).start();
         (new Thread(new PrintData())).start();
         (new ReadInventoryThread()).start();
-        System.out.println("end");
+        log.info("end");
     }
 }
