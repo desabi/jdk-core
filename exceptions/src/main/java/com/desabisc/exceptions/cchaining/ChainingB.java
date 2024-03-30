@@ -27,19 +27,21 @@ public class ChainingB {
             seeAnimal();
         } catch (ExhibitClosed  e) { // superclass exception
             System.out.println("Try back later");
-        } catch (ExhibitClosedForLunch e) { // subclass exception. Exception has already been caught
-            System.out.println("Not today");
+        //} catch (ExhibitClosedForLunch e) { // subclass exception. Exception has already been caught
+            //System.out.println("Not today");
         }
         // if the more specific ExhibitClosedForLunch exception is thrown, the catch block for ExhibitClosed runs.
     }
 
-    void seeAnimal() {}
+    public void seeAnimal() {
+
+    }
 
     // another example
     public void visitSnakes() {
         try {
         } catch (IllegalArgumentException e) { // superclass exception
-        } catch (NumberFormatException e) { // subclass exception. Exception has already been caught
+        //} catch (NumberFormatException e) { // subclass exception. Exception has already been caught
         }
         /**
          * NumberFormatException is a subclass of NumberFormat exception.
@@ -51,9 +53,9 @@ public class ChainingB {
     // the previous examples are unchecked exceptions, inherits from RuntimeException
     // other example
     public void readFile() {
-        try {
-        } catch (IOException e) { // superclass exception: checked exception
-        } catch (FileNotFoundException e) { // subclass exception. Exception has already been caught
-        }
+//        try {
+//        } catch (IOException e) { // superclass exception: checked exception
+//        } catch (FileNotFoundException e) { // subclass exception. Exception has already been caught
+//        }
     }
 }
