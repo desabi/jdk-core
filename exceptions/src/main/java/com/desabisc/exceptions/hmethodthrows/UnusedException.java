@@ -13,13 +13,13 @@ public class UnusedException {
         // B) In comparison, good() is free to declare other exceptions.
     }
 
-    public void bad() {
-        try {
-            eatCarrot(); // A) java knows that eatCarrot() can't thrown a checked exception, which means that there's
-                         //    no way fot the catch block in bad tp be reached
-        } catch (NoMoreCarrotsException e) { // DOES NOT COMPILE
-            System.out.println("sad rabbit");
-        }
-    }
+//    public void bad() {
+//        try {
+//            eatCarrot(); // A) java knows that eatCarrot() can't thrown a checked exception, which means that there's
+//                         //    no way fot the catch block in bad tp be reached
+//        } catch (NoMoreCarrotsException e) { // DOES NOT COMPILE
+//            System.out.println("sad rabbit");
+//        }
+//    }
 
 }
