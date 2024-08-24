@@ -26,7 +26,12 @@ public class ExecuteExample {
         // Shutdown the executorService
         executorService.shutdown();
 
-        // execute vs submit: see examples from cexecutesubmit package
+        /*
+        output:
+        Task 1 executed by: pool-1-thread-1
+        Task 2 executed by: pool-1-thread-2
+         */
 
+        // execute vs submit: see examples from cexecutesubmit package
     }
 }

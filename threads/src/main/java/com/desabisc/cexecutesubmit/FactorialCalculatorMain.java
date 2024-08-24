@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class FactorialCalculator {
+public class FactorialCalculatorMain {
     public static void main(String[] args) {
         // Creating a thread pool with 5 threads
         ExecutorService executor = Executors.newFixedThreadPool(5);

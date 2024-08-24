@@ -12,7 +12,7 @@ public class SquareCalculatorMain {
         // Creating a fixed-size thread pool with 3 threads
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
-        Future<Integer> future = executorService.submit(new SquareCalculator(5));
+        Future<Integer> future = executorService.submit(new SquareCalculatorCallable(5));
 
         try {
             // Blocking and getting the result from the Future

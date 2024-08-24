@@ -2,11 +2,11 @@ package com.desabisc.cexecutesubmit;
 
 import java.util.concurrent.Callable;
 
-public class SquareCalculator implements Callable<Integer> {
+public class SquareCalculatorCallable implements Callable<Integer> {
 
     private final int number;
 
-    public SquareCalculator(int number) {
+    public SquareCalculatorCallable(int number) {
         this.number = number;
     }
 

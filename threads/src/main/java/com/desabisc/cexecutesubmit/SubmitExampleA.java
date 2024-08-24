@@ -14,7 +14,7 @@ public class SubmitExampleA {
 
         Runnable runnable = () -> {
             for (int i = 0; i < 3; i++) {
-                log.info("Printint record = " + i);
+                log.info("Printing record = " + i);
             }
         };
 
@@ -22,7 +22,7 @@ public class SubmitExampleA {
         executorService.submit(runnable);
 
         // method submit with a callable
-        Future<Integer> future = executorService.submit(new SquareCalculator(5));
+        Future<Integer> future = executorService.submit(new SquareCalculatorCallable(5));
 
         try {
             // Blocking and getting the result from the Future
