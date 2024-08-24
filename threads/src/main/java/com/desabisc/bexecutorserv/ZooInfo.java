@@ -22,6 +22,7 @@ public class ZooInfo {
         };
 
         try {
+            /** With a single thread executor, results are guaranteed to be executed sequentially*/
             executorService = Executors.newSingleThreadExecutor();
             log.info("begin");
             executorService.execute(task1);

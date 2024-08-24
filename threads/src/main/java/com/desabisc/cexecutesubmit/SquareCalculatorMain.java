@@ -7,21 +7,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 @Slf4j
-public class SubmitExampleA {
+public class SquareCalculatorMain {
     public static void main(String[] args) {
+        // Creating a fixed-size thread pool with 3 threads
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
 
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
-
-        Runnable runnable = () -> {
-            for (int i = 0; i < 3; i++) {
-                log.info("Printint record = " + i);
-            }
-        };
-
-        // method submit with a runnable
-        executorService.submit(runnable);
-
-        // method submit with a callable
         Future<Integer> future = executorService.submit(new SquareCalculator(5));
 
         try {

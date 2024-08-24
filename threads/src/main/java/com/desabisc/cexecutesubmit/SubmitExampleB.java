@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 @Slf4j
-public class SubmitExample {
+public class SubmitExampleB {
     /**
      * The submit() method is similar to execute(), but it returns a Future object,
      * which can be used to retrieve the result of the computation.
