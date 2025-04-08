@@ -6,14 +6,14 @@ import lombok.extern.slf4j.Slf4j;
  * Create thread extending Thread
  * */
 @Slf4j
-public class ReadInventoryThread extends Thread {
+public class ThreadReadInventory extends Thread {
     @Override
     public void run() { // overrides method in Thread
-        log.info("Printing zoo inventory");
+        log.info("Extending Thread: Printing zoo inventory");
     }
 
     public static void main(String[] args) {
-        (new ReadInventoryThread()).start();
-        log.info("Main Thread");
+        (new ThreadReadInventory()).start();
+        log.info("Extending Thread: Main Thread");
     }
 }
