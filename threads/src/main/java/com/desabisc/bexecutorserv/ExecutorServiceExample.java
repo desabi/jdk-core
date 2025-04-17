@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Slf4j
-public class ZooInfo {
+public class ExecutorServiceExample {
     /**
      * Java includes the Concurrency API to handle the complicated work of managing threads for you.
      * API includes the ExecutorService interface, which defines services that create and manage threads for you.
@@ -17,17 +17,18 @@ public class ZooInfo {
         Runnable task1 = () -> log.info("Printing zoo inventory");
         Runnable task2 = () -> {
             for (int i = 0; i < 3; i++) {
-                log.info("Printint record = " + i);
+                log.info("Printing record = {} ", i);
             }
         };
 
         try {
-            /** With a single thread executor, results are guaranteed to be executed sequentially*/
+            // With a single thread executor, results are guaranteed to be executed sequentially
             executorService = Executors.newSingleThreadExecutor();
             log.info("begin");
-            executorService.execute(task1);
             executorService.execute(task2);
             executorService.execute(task1);
+            executorService.execute(task1);
+            executorService.execute(task2);
             log.info("end");
         } finally {
             if (executorService != null)

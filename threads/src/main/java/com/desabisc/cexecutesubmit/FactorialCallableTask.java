@@ -1,7 +1,9 @@
 package com.desabisc.cexecutesubmit;
 
 import java.util.concurrent.Callable;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class FactorialCallableTask implements Callable<Long> {
 
     private final int number;
@@ -12,6 +14,8 @@ public class FactorialCallableTask implements Callable<Long> {
 
     @Override
     public Long call() throws Exception {
+        log.info("Starting task, calculate factorial of: {}", number);
+        Thread.sleep(4000);
         return calculateFactorial(number);
     }
 
