@@ -12,21 +12,32 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class CreateFileEg {
+
+  private static final String PATH_NAME = "C:\\tests\\java\\io\\stripes.txt";
+
   public static void main(String[] args) {
     useFile();
     usePath();
     switchEg();
   }
 
+  /**
+   * The file should exist.
+   * It does not create the file.
+   */
   static void useFile() {
     log.info("Using File...");
-    File zooFile1 = new File("C:\\Users\\desab\\dev\\stripes.txt");
+    File zooFile1 = new File(PATH_NAME);
     log.info("File exist: {}", zooFile1.exists());
   }
 
+  /**
+   * The file should exist.
+   * It does not create the file.
+   */
   static void usePath() {
     log.info("Using Path...");
-    Path zooPath1 = Path.of("C:\\tests\\io\\stripes.txt");
+    Path zooPath1 = Path.of(PATH_NAME);
     log.info("File (with Path) exists: {}", Files.exists(zooPath1));
   }
 
