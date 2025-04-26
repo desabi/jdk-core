@@ -1,5 +1,6 @@
 package com.desabisc.guide.java.io.acreatefile;
 
+import com.desabisc.guide.java.io.util.Constants;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -13,8 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CreateFileEg {
 
-  private static final String PATH_NAME = "C:\\tests\\java\\io\\stripes.txt";
-
   public static void main(String[] args) {
     useFile();
     usePath();
@@ -27,7 +26,7 @@ public class CreateFileEg {
    */
   static void useFile() {
     log.info("Using File...");
-    File zooFile1 = new File(PATH_NAME);
+    File zooFile1 = new File(Constants.PATH_TO_FILE);
     log.info("File exist: {}", zooFile1.exists());
   }
 
@@ -37,7 +36,7 @@ public class CreateFileEg {
    */
   static void usePath() {
     log.info("Using Path...");
-    Path zooPath1 = Path.of(PATH_NAME);
+    Path zooPath1 = Path.of(Constants.PATH_TO_FILE);
     log.info("File (with Path) exists: {}", Files.exists(zooPath1));
   }
 
