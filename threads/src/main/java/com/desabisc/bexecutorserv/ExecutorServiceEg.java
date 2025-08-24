@@ -22,12 +22,15 @@ public class ExecutorServiceEg {
       try (ExecutorService executorService = Executors.newFixedThreadPool(2)) {
 
         // Submitting tasks for execution using execute()
+        // execute() receives a Runnable as a parameter
         executorService.execute(
             () -> log.info("Task 1 executed by: {}", Thread.currentThread().getName())
         );
 
         Runnable runnable = () -> log.info("Task 2 executed by: {}",
             Thread.currentThread().getName());
+
+        // Submitting tasks for execution using execute
         executorService.execute(runnable);
 
         // Shutdown the executorService
