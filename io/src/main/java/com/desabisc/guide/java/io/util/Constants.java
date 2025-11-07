@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Constants {
-  public static final String PATH_TO_FILE = "C:\\tests\\java\\io\\zoo.txt";
-  public static final String PATH_TO_DIRECTORY = "C:\\tests\\java\\io\\zoo.txt";
+  /** Points to a file. */
+  public static final String PATH_TO_FILE = "C:\\tests\\java\\io\\animals.txt";
+  /** Points to a directory/folder. */
+  public static final String PATH_TO_DIRECTORY = "C:\\tests\\java\\io\\data";
 }

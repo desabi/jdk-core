@@ -51,7 +51,7 @@ public class OperationEg {
    * Using NIO.2 (non-blocking I/O).
    *
    * @param path the path value.
-   * @throws IOException
+   * @throws IOException if an error occurs
    */
   static void operationsWithPath(Path path) throws IOException {
     log.info("########## Using Path ##########");
