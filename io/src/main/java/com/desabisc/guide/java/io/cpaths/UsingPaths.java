@@ -32,7 +32,7 @@ public class UsingPaths {
   }
 
   static void subPathEg() {
-    log.info("########## Sub Path EG ##########");
+    log.info("########## Sub Path Examples ##########");
     var path = Path.of(Constants.PATH_TO_FILE);
     log.info("The Path is: {}", path);
     for (int index = 0; index < path.getNameCount(); index++) {

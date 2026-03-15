@@ -60,7 +60,7 @@ public class OperationEg {
       log.info("Is Directory: {}", Files.isDirectory(path));
       log.info("Parent Path: {}", path.getParent());
       if (Files.isRegularFile(path)) {
-        // If a NIO.2 method declares an IOOException, it usually requires the paths it operates on
+        // If a NIO.2 method declares an IOException, it usually requires the paths it operates on
         // to exist
         log.info("Size: {}", Files.size(path)); // IOException
         log.info("Last modified: {}", Files.getLastModifiedTime(path));

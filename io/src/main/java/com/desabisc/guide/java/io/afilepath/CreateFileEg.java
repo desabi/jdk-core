@@ -1,4 +1,4 @@
-package com.desabisc.guide.java.io.acreatefile;
+package com.desabisc.guide.java.io.afilepath;
 
 import com.desabisc.guide.java.io.util.Constants;
 import java.io.File;
@@ -7,9 +7,9 @@ import java.nio.file.Path;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * <p>File and Path</p>
- * Both are used to represent the location of a file or directory within your computer's file system
- * (like C:\Users\MyDoc.txt or /home/user/report.pdf).
+ * <p><b>File and Path</b></p>
+ * <p><b>Both are used to represent the location of a file or directory within your computer's file system
+ * (like C:\Users\MyDoc.txt or /home/user/report.pdf).</b></p>
  * <ul>
  *   <li>File -> IO: input/output</li>
  *   <li>Path -> NIO.2: non-blocking I/O (recommend)</li>
@@ -29,10 +29,12 @@ public class CreateFileEg {
   }
 
   /**
-   * The file should exist.
-   * It does not create the file.
-   * The File object points to a given location on disk.
-   * Operations are on the File object itself.
+   * <ul>
+   *   <li>The file should exist.</li>
+   *   <li>It does not create the file.</li>
+   *   <li>The File object points to a given location on disk.</li>
+   *   <li>Operations are on the File object itself.</li>
+   * </ul>
    */
   static void useFile() {
     log.info("Using File...");
@@ -41,10 +43,12 @@ public class CreateFileEg {
   }
 
   /**
-   * The file should exist.
-   * It does not create the file.
-   * The Path object point to a given location on disk.
-   * Represents just the path. Operations are done by the Files utility class.
+   * <ul>
+   *   <li>The file should exist.</li>
+   *   <li>It does not create the file.</li>
+   *   <li>The Path object point to a given location on disk.</li>
+   *   <li>Represents just the path. Operations are done by the Files utility class.</li>
+   * </ul>
    */
   static void usePath() {
     log.info("Using Path...");
