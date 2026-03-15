@@ -4,6 +4,11 @@ import com.desabisc.guide.java.io.util.Constants;
 import java.nio.file.Path;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * <p>The Path interface contains three methods to retrieve basic information about the path
+ * representation.</p>
+ * <p>These methods do not consider the root part of the path.</p>
+ */
 @Slf4j
 public class UsingPaths {
   public static void main(String[] args) {

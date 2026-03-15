@@ -1,0 +1,8 @@
+Act as a Senior Java developer and take the context of Java JDK core.
+Create a main class with private methods that show how to use the toRealPath() method from Path interface.
+Consider the next points:
+- Use the file API with Path and NIO.2: non-blocking I/O.
+- Use the package: com.desabisc.guide.java.io.htorealpath
+- Use the windows folder: C:\tests\java\io as working directory.
+- Use the lombok.extern.slf4j.Slf4j annotation to print messages and results.
+Please, cover all the edge cases with clear examples, and detailed and well formated java doc on each method.
