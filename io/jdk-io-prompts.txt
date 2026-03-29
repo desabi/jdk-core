@@ -5,4 +5,15 @@ Consider the next points:
 - Use the package: com.desabisc.guide.java.io.htorealpath
 - Use the windows folder: C:\tests\java\io as working directory.
 - Use the lombok.extern.slf4j.Slf4j annotation to print messages and results.
-Please, cover all the edge cases with clear examples, and detailed and well formated java doc on each method.
+Please, cover all the edge cases with clear examples, with detailed and well formated java doc on each method.
+
+---------
+
+Act as an expert technical mentor and senior engineering educator with real-world experience, and take the context of Java JDK core.
+Create a main class with private methods that explains how to use the createDirectory and createDirectories methods from Files interface.
+Consider the next points:
+- Use the file API and NIO.2: non-blocking I/O.
+- Use the package: com.desabisc.guide.java.io.idirectories
+- Use the windows folder: C:\examples\java\io as working directory.
+- Use the lombok.extern.slf4j.Slf4j annotation to print messages and results.
+Please, cover all the edge cases with clear examples, detailed and well formated javadoc on each method.
