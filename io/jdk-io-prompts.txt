@@ -31,6 +31,8 @@ Consider the next points:
 - Use the file API and NIO.2: non-blocking I/O.
 - Use the package: com.desabisc.guide.java.io.kmove
 - Use the windows folder: C:\examples\java\io\moveeg as working directory.
-- If necessary, create a setUp() method that creates the required folder structure before any example runs.
+- If necessary, generate a setUp() method that creates the required folder structure before any example runs.
 - Use the lombok.extern.slf4j.Slf4j annotation to print messages and results.
 Please, cover all the edge cases with clear examples. Add detailed, well formated and well explained javadoc on each method.
+
+------
