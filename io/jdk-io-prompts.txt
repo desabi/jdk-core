@@ -24,13 +24,13 @@ The setUp() method creates the required folder structure before any example runs
 
 ----
 Act as an expert technical mentor and senior engineering educator with real-world experience, and take the context of Java JDK core.
-Create a main class with private methods that explains how to use the move method from Files interface.
+Create main classes with private methods that explains how to use the delete and deleteIfExists methods from Files class.
 Consider the next points:
-- Create examples to move and rename files.
-- Create examples to move and rename directories.
+- Create one class for delete method examples.
+- Create another class for deleteIfExists method examples.
 - Use the file API and NIO.2: non-blocking I/O.
-- Use the package: com.desabisc.guide.java.io.kmove
-- Use the windows folder: C:\examples\java\io\moveeg as working directory.
+- Use the package: com.desabisc.guide.java.io.ldelete
+- Use the windows folder: C:\examples\java\io\deleteeg as working directory.
 - If necessary, generate a setUp() method that creates the required folder structure before any example runs.
 - Use the lombok.extern.slf4j.Slf4j annotation to print messages and results.
 Please, cover all the edge cases with clear examples. Add detailed, well formated and well explained javadoc on each method.
