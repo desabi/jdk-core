@@ -36,3 +36,23 @@ Consider the next points:
 Please, cover all the edge cases with clear examples. Add detailed, well formated and well explained javadoc on each method.
 
 ------
+
+Act as an expert technical mentor and senior engineering educator with real-world experience, and take the context of Java JDK core.
+Create main classes with private methods that explains how to use the isSameFile and mismatch methods from Files class.
+Consider the next points:
+- Create one main class for isSameFile method examples.
+- Create another main class for mismatch method examples.
+- Use the file API and NIO.2: non-blocking I/O.
+- Use the package: com.desabisc.guide.java.io.mcompare
+- Use the windows folder: C:\examples\java\io\compareeg as working directory.
+- If necessary, generate a setUp() method that creates the required folder structure and files before any example runs.
+- Use the lombok.extern.slf4j.Slf4j annotation to print messages and results.
+Please, cover all the edge cases with clear examples. Add detailed, well formated and well explained javadoc on each method.
+
+-- 
+Act as an expert technical mentor and senior engineering educator with real-world experience, and take the context of Java JDK core.
+Give me some challenges ideas for projects that implements files manipulation with the file API (NIO.2).
+Consider the next points:
+- Give me real-world scenarios to gain real-world experience.
+- 
+Do not show me code, just the hihg level idea for each example.
