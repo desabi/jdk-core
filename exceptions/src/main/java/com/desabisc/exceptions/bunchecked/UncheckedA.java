@@ -1,10 +1,9 @@
 package com.desabisc.exceptions.bunchecked;
 
 /**
- * An unchecked exception in any exception that does not need to be declared or handled by the application code
- * where it is thrown.
- *
- * Are often referred as runtime exceptions, include any class that inherits RuntimeException or Error classes.
+ * <p>An unchecked exception in any exception that does not need to be declared or handled by the application code
+ * where it is thrown.</p>
+ * <p>Are often referred as runtime exceptions, include any class that <b>inherits RuntimeException or Error classes.</b></p>
  * */
 public class UncheckedA {
 
