@@ -1,9 +1,9 @@
 package com.desabisc.exceptions.fcloseresources;
 
-public class MyFileclass implements AutoCloseable {
+public class MyFileClass implements AutoCloseable {
     private final int num;
 
-    public MyFileclass(int num) {
+    public MyFileClass(int num) {
         this.num = num;
     }
 

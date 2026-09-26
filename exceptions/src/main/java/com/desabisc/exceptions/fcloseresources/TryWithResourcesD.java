@@ -2,8 +2,8 @@ package com.desabisc.exceptions.fcloseresources;
 
 public class TryWithResourcesD {
     public static void main(String[] args) {
-        try (MyFileclass a1 = new MyFileclass(1);
-            MyFileclass a2 = new MyFileclass(2)) { // is executed in reverse order.
+        try (MyFileClass a1 = new MyFileClass(1);
+            MyFileClass a2 = new MyFileClass(2)) { // is executed in reverse order.
             throw new RuntimeException();
         } // finally is executed. close method is executed, prints the number 2 and 1.
         catch (Exception e) {

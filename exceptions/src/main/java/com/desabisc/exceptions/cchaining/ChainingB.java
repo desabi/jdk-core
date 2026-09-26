@@ -4,13 +4,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class ChainingB {
+
     /**
-     * Java looks at the order of the catch blocks. If it is impossible for one of the catch blocks to be executed,
-     * a compiler error about unreachable code occurs.
-     *
+     * <p>Java looks at the order of the catch blocks. If it is impossible for one of the catch blocks
+     * to be executed, a compiler error about unreachable code occurs.</p>
      * This happens when a super class catch block appears before a subclass catch block.
      * */
-
     public void visitMonkeys() {
         try {
             seeAnimal();
@@ -37,21 +36,23 @@ public class ChainingB {
 
     }
 
-    // another example
+    /**
+     * <p>NumberFormatException is a subclass of IllegalArgumentException.</p>
+     * Since NumberFormatException is a subclass, it will always be caught by the first catch block,
+     * making the second catch block unreachable code that does not compile.
+     * */
     public void visitSnakes() {
         try {
         } catch (IllegalArgumentException e) { // superclass exception
         //} catch (NumberFormatException e) { // subclass exception. Exception has already been caught
         }
-        /**
-         * NumberFormatException is a subclass of NumberFormat exception.
-         * Since NumberFormatException is a subclass, it will always be caught by the first catch block,
-         * making the second catch block unreachable code that does not compile.
-         * */
+
     }
 
-    // the previous examples are unchecked exceptions, inherits from RuntimeException
-    // other example
+    /**
+     * <p>The previous examples are unchecked exceptions, inherits from RuntimeException</p>
+     * Other example using checked exceptions.
+     */
     public void readFile() {
 //        try {
 //        } catch (IOException e) { // superclass exception: checked exception

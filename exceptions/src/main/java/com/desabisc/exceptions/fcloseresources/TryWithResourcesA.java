@@ -25,13 +25,12 @@ public class TryWithResourcesA {
     }
 
     /**
-     * --> Java includes the try-with-resources statement to automatically close all resources opened in a try clause.
-     * --> Also known as automatic resource management
-     * --> Parentheses are required.
+     * <p>Java includes the try-with-resources statement to automatically close all resources opened in a try clause.</p>
+     * Also known as automatic resource management, parentheses are required.
      * */
     public void readFileB() {
-        // by using try with resources, we guarantee that as soon as a connection passes out of scope, Java will
-        // attempt to close it within the same method.
+        // by using try with resources, we guarantee that as soon as a connection passes out of scope,
+        // Java will attempt to close it within the same method.
         try (FileInputStream is = new FileInputStream("myfile.txt")) {
             // read file data.
         } catch (IOException e) {
@@ -40,8 +39,8 @@ public class TryWithResourcesA {
     }
 
     /**
-     * --> Behind the scenes, the compiler replaces a try-with-resources block with a try and finally block.
-     * --> Hidden finally block or implicit finally block.
-     * --> You can define a finally block, just be aware that the implicit one will be called first.
+     * - Behind the scenes, the compiler replaces a try-with-resources block with a try and finally block.
+     * - Hidden finally block or implicit finally block.
+     * - You can define a finally block, just be aware that the implicit one will be called first.
      * */
 }

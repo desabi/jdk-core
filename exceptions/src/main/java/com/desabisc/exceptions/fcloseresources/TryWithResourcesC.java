@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TryWithResourcesC {
     /**
-     * --> The implicit finally runs before any catch/finally blocks that you code yourself.
+     * The implicit finally runs before any catch/finally blocks that you code yourself.
      * */
     public void methodTest() {
         try (Scanner s = new Scanner(System.in)) {

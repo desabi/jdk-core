@@ -1,13 +1,12 @@
 package com.desabisc.exceptions.cchaining;
 
+/**
+ * <p>In this example, there are three custom exceptions.</p>
+ * <p>All are unchecked exceptions because they directly or indirectly extend RuntimeException.</p>
+ * There are three possibilities:
+ * */
 public class ChainingA {
 
-    /**
-     * In this example, there are three custom exceptions. All are unchecked exceptions because they directly
-     * or indirectly extend RuntimeException.
-     *
-     * There are three possibilities:
-     * */
     public void visitPorcupine() {
         try {
             seeAnimal(); // if this doesn't throw an exception, nothing is printed out.

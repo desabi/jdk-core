@@ -8,9 +8,9 @@ import java.util.MissingResourceException;
 
 public class MutiCatchA {
     /**
-     * --> Multi catch is intended to be used for exceptions that aren´t related.
-     * --> The only difference between multi-catch blocks and chaining catch blocks is that:
-     *     order does not matter for a multi-catch block within a single catch expression.
+     * <p>Multi catch is intended to be used for exceptions that aren't related.</p>
+     * The only difference between multi-catch blocks and chaining catch blocks is that:
+     * order does not matter for a multi-catch block within a single catch expression.
      * */
     public static void main(String[] args) {
         try {

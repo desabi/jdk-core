@@ -15,6 +15,8 @@ public class CheckedA {
     // The following method declares that it might throw an IOException, which is a checked Exception
     void fallA(int distance) throws IOException { // throws declares that the might throw an Exception
         if (distance > 10) {
+            // The throw keyword tells Java that you want some other part of the code to deal with
+            // the exception.
             throw new IOException(); // throw tells Java that you want to throw an Exception
         }
     }

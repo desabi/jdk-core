@@ -3,9 +3,9 @@ package com.desabisc.exceptions.efinally;
 public class FinallyB {
 
     /**
-     * Possible results: 
-     * --> 1 and 3 if no exception happens.
-     * --> 2 and 3 if exception happens.
+     * <p>Possible results:</p>
+     * a) 1 and 3 if no exception happens. </br>
+     * b) 2 and 3 if exception happens.
      * */
     public static int goHome() {
         try {
@@ -31,7 +31,7 @@ public class FinallyB {
     }
 
     /**
-     * --> While a finally block will always be executed it may not finish
+     * While a finally block will always be executed it may not finish
      * */
     public String finallyNoExecuted() {
         MyInfo info = null;
