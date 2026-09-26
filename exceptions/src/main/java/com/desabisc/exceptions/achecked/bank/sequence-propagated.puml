@@ -1,0 +1,39 @@
+@startuml
+title Sequence — InvalidAgeException propagated via "throws" up to Main
+
+actor Main
+participant "AccountService" as Service
+participant "AccountValidator" as Validator
+
+Main -> Service : openAccount("Underage Applicant", "16", 100.0)
+activate Service
+
+Service -> Validator : validateAge("16")
+activate Validator
+
+Validator -> Validator : age = Integer.parseInt("16")\nage < MINIMUM_AGE
+
+Validator --> Service : throw new InvalidAgeException(...)
+deactivate Validator
+note right of Validator
+  Declared with "throws InvalidAgeException" —
+  NOT caught here. Responsibility moves
+  to the caller (AccountService).
+end note
+
+Service --> Main : InvalidAgeException propagates\n(openAccount also declares "throws")
+deactivate Service
+note right of Service
+  openAccount() also declares
+  "throws InvalidAgeException" instead
+  of catching — propagates one more hop.
+end note
+
+Main -> Main : catch (InvalidAgeException e)\n{ log rejection }
+note right of Main
+  Main is the first (and only) place
+  in this call chain with an actual
+  try/catch for InvalidAgeException.
+end note
+
+@enduml

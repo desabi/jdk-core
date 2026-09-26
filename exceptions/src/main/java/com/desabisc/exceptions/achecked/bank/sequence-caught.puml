@@ -1,0 +1,38 @@
+@startuml
+title Sequence — InsufficientBalanceException caught inside AccountService
+
+actor Main
+participant "AccountService" as Service
+participant "BankAccount" as Account
+
+Main -> Service : processWithdrawal(account, 1000.0)
+activate Service
+
+Service -> Account : withdraw(1000.0)
+activate Account
+
+Account -> Account : amount > balance ?
+
+Account --> Service : throw new InsufficientBalanceException(...)
+deactivate Account
+note right of Account
+  Declared with "throws InsufficientBalanceException" —
+  BankAccount has no meaningful way to
+  recover, so it hands the exception up.
+end note
+
+Service -> Service : catch (InsufficientBalanceException e)\n{ log failure }
+note right of Service
+  Caught right here — AccountService CAN
+  decide the outcome, so it stops the
+  exception from propagating further.
+end note
+
+Service --> Main : return false
+deactivate Service
+note right of Main
+  Main never sees InsufficientBalanceException
+  at all — no try/catch needed for it here.
+end note
+
+@enduml

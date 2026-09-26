@@ -1,0 +1,62 @@
+@startuml
+title Checked Exceptions Example — Class Diagram
+
+' --- Exception hierarchy ---
+class Throwable
+class Exception
+class RuntimeException
+class NumberFormatException
+class InvalidAgeException
+class InsufficientBalanceException
+
+Throwable <|-- Exception
+Exception <|-- RuntimeException
+RuntimeException <|-- NumberFormatException
+Exception <|-- InvalidAgeException
+Exception <|-- InsufficientBalanceException
+
+note right of InvalidAgeException
+  CHECKED — extends Exception
+  (does not pass through RuntimeException)
+end note
+
+note right of NumberFormatException
+  UNCHECKED — extends RuntimeException
+end note
+
+' --- Application classes ---
+class AccountValidator {
+  +MINIMUM_AGE: int = 18
+  +validateAge(ageInput: String): int
+}
+
+class BankAccount {
+  -ownerName: String
+  -balance: double
+  +BankAccount(ownerName: String, initialDeposit: double)
+  +withdraw(amount: double): void
+  +getOwnerName(): String
+  +getBalance(): double
+}
+
+class AccountService {
+  -validator: AccountValidator
+  +openAccount(ownerName: String, ageInput: String, initialDeposit: double): BankAccount
+  +processWithdrawal(account: BankAccount, amount: double): boolean
+}
+
+class Main {
+  +main(args: String[]): void
+}
+
+' --- Relationships ---
+AccountService "1" --> "1" AccountValidator : uses
+AccountService ..> BankAccount : creates / uses
+Main --> AccountService : uses
+
+AccountValidator ..> InvalidAgeException : <<throws>>
+BankAccount ..> InsufficientBalanceException : <<throws>>
+AccountService ..> InvalidAgeException : <<throws\n(propagated)>>
+AccountService ..> InsufficientBalanceException : <<catches>>
+
+@enduml

@@ -17,4 +17,9 @@ Enhanced prompts:
 * https://chatgpt.com/c/6ab7fa06-3790-83e8-8029-9b258a134fb2
 
 Asked prompts:
-* 
+* https://claude.ai/chat/c47fb322-b131-4392-9799-0eff7ff4898c
+* https://chatgpt.com/c/6ab8461f-91d0-83e8-b8b5-6361c9bcc9d5
+
+TODO:
+- Rethrowing exceptions.
+- Wrapping / exception chaining (rethrow as a different type)
